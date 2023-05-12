@@ -1,0 +1,113 @@
+.main{
+    margin-top: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-grow: 1;
+    width: 100%;
+
+    &-left{
+        width: 40%;
+
+        p{
+            margin-top: 40px;
+        }
+
+        a{
+            display: flex;
+            margin-top: 48px;
+            gap: 14px;
+        }
+
+        @include breakpoint(xs){
+            width: 100%;
+
+            p{
+                margin-top: 25px;
+                font-size: 1.4rem;
+            }
+
+            a{
+                margin-top: 20px;
+                font-size: 1.4rem;
+            }
+        }
+
+        @include breakpoint(sm){
+            width: 100%;
+        }
+    }
+
+    &-right{
+        position: relative;
+        width: 57%;
+
+        &_img_subcontainer{
+            position: absolute;
+            padding: 10px 90px 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            right: 75px;
+            bottom: -90px;
+            background: black;
+
+            &-user{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+
+                img{
+                    width: 100%;
+                    border-radius: 100%;
+                }
+
+                &-left{
+                    width: 50px;
+                }
+
+                &-right{
+                    // width: -webkit-fill-available;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
+            }
+
+            @include breakpoint(xs){
+                right: 20px;
+                bottom: -85px;
+                padding: 10px 70px 25px 20px;
+            }
+
+            @include breakpoint(sm){
+                right: 20px;
+            }
+        }
+
+        @include breakpoint(xs){
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        @include breakpoint(sm){
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    @include breakpoint(xs){
+        margin-top: 34px;
+        display: block;
+        
+        &.isActive{
+            display: none;
+        }
+    }
+
+    @include breakpoint(sm){
+        margin-top: 80px;
+        display: block;
+    }
+}

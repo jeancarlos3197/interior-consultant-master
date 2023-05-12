@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    color: white;
+    background-color: black;
+}
+
+figure{
+    margin: 0;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    // @include font-general(map-get($font-family,primary), map-get($weight,exLight), 1.4rem);
+    font-family: map-get($font-family,primary);
+    font-weight: map-get($weight,exLight);
+    font-size: 1.4rem;
+}
+
+.header-navbar {
+
+    a{
+        text-decoration: none;
+        // @include font-general(map-get($font-family,info), map-get($weight,medium), 1.8rem);
+        font-family: map-get($font-family,info);
+        font-weight: map-get($weight,medium);
+        font-size: 1.8rem;
+    }
+
+    li:nth-child(1) a{
+        font-weight: map-get($weight, bold);
+    }
+}
+
+h2{
+    font-family: map-get($font-family,secondary);
+    font-weight: map-get($weight,medium);
+    font-size: 4.8rem;
+    // @include font-general(map-get($font-family,secondary), map-get($weight,medium), 4.8rem);
+
+    @include breakpoint(xs){
+        font-size: 3.6rem;
+    }
+}
+
+.main-left {
+
+    p{
+        font-family: map-get($font-family,info);
+        font-weight: map-get($weight,normal);
+        font-size: 2.4rem;
+        // @include font-general(map-get($font-family,info), map-get($weight,normal), 2.4rem);
+    }
+
+    a{
+        font-family: map-get($font-family,info);
+        font-weight: map-get($weight,bold);
+        font-size: 1.8rem;
+        // @include font-general(map-get($font-family,info), map-get($weight,bold), 1.8rem);
+        text-decoration: none;
+    }
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.main-right_img_subcontainer {
+
+    h3{
+        font-family: map-get($font-family,info);
+        font-weight: map-get($weight,medium);
+        font-size: 1.4rem;
+        // @include font-general(map-get($font-family,info), map-get($weight,medium), 1.4rem);
+
+        @include breakpoint(xs){
+            font-size: 1.2rem;
+        }
+    }
+
+    p{
+        font-family: map-get($font-family,info);
+        font-weight: map-get($weight,medium);
+        font-size: 1.2rem;
+        // @include font-general(map-get($font-family,info), map-get($weight,medium), 1.2rem);
+
+        @include breakpoint(xs){
+            font-size: 1rem;
+        }
+    }
+
+    h4{
+        font-family: map-get($font-family,secondary);
+        font-weight: map-get($weight,bold);
+        font-size: 2.4rem;
+        // @include font-general(map-get($font-family,secondary), map-get($weight,bold), 2.4rem);
+
+        @include breakpoint(xs){
+            font-size: 1.8rem;
+        }
+    }
+}
+
+ul{
+
+    &.isActive{
+
+        @include breakpoint(xs){
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 32px;
+        }
+    }
+}
+
+.footer{
+    font-family: map-get($font-family,info);
+    font-size: 1.4rem;
+    // @include font-general(map-get($font-family,info), map-get($weight,normal), 1.4rem);
+}
+
+.wrapper{
+    padding: 40px 70px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: black;
+
+    @include breakpoint(xs){
+        transition: all 1s ease;
+        padding: 10px 10px 0 10px;
+        height: 90vh;
+    }
+
+    @include breakpoint(sm){
+        padding: 20px 40px 20px 40px;
+    }
+}

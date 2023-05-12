@@ -1,0 +1,19 @@
+@mixin breakpoint($breakpoint) {
+  @if ($breakpoint == xs) {
+    @media (max-width: map-get($breakpoints, xs)) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media (min-width:500px) and (max-width: map-get($breakpoints, sm)) {
+      @content;
+    }
+  }
+}
+
+@mixin font-general($family, $weight, $size){
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+}
